@@ -22,7 +22,7 @@ export function ShoppingListItem({ name, isCompleted }: Props) {
           text: "Cancel",
           style: "cancel",
         },
-      ]
+      ],
     );
   };
 
@@ -41,11 +41,12 @@ export function ShoppingListItem({ name, isCompleted }: Props) {
       >
         {name}
       </Text>
-      <TouchableOpacity
-        onPress={handleDelete}
-        activeOpacity={0.8}
-      >
-        <AntDesign name="closecircle" size={24} color={isCompleted ? theme.colorGrey : theme.colorRed} />
+      <TouchableOpacity onPress={handleDelete} activeOpacity={0.8}>
+        <AntDesign
+          name="closecircle"
+          size={24}
+          color={isCompleted ? theme.colorGrey : theme.colorRed}
+        />
       </TouchableOpacity>
     </View>
   );
